@@ -24,12 +24,30 @@ This script creates multiple Active Directory users with randomized attributes. 
 3.  You will be prompted to enter the domain name (e.g., `company.com`).
 4.  The script will then create the specified number of users in your Active Directory domain.
 
+### `file_share_gen.ps1`
+
+This script creates multiple file shares with varying permissions and sensitive/non-sensitive content for security testing purposes.
+
+#### Features
+
+-   Creates file shares with "Normal", "Open", or "Locked" permissions.
+-   Generates both sensitive and normal files with random content.
+-   Logs all actions to a file for auditing.
+-   Handles errors gracefully and provides detailed error messages.
+
+#### Usage
+
+1.  Run the script in PowerShell.
+2.  You will be prompted to enter the number of shares to create.
+3.  You will be prompted to enter the base path for share creation (e.g., `C:\Shares`).
+4.  The script will then create the specified number of file shares with varying permissions and content.
+
 ## Prerequisites
 
 -   Windows machine with PowerShell.
 -   Active Directory domain.
--   RSAT (Remote Server Administration Tools) for Active Directory installed (the script will attempt to install this if it is not already installed).
--   Appropriate permissions to create users in the Active Directory domain.
+-   RSAT (Remote Server Administration Tools) for Active Directory installed (the `user_gen.ps1` script will attempt to install this if it is not already installed).
+-   Appropriate permissions to create users and file shares in the Active Directory domain.
 
 ## Contributing
 
